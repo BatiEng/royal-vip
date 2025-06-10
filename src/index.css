@@ -1,0 +1,15 @@
+@import "tailwindcss";
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #fdf2f8;
+}
+.hero {
+  background-image: url("./assets/hero3.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: background-image 0.8s ease-in-out;
+}
