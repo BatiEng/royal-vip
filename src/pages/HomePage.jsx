@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Features from "../components/Features";
 import Contact from "../components/Contact";
@@ -15,14 +15,19 @@ function HomePage() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         {/* İçerik */}
-        <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 text-white max-w-5xl">
+        <motion.div
+          className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 text-white max-w-5xl"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h1 className="text-4xl md:text-7xl font-bold leading-tight mb-4">
             Royal VIP Güzellik Salonu
           </h1>
           <h2 className="text-lg md:text-2xl max-w-2xl">
             Her detayda zarafet, her bakımda özen. Şimdi kendine bir iyilik yap.
           </h2>
-        </div>
+        </motion.div>
       </div>
 
       <div className="bg-pink-50">

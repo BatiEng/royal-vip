@@ -1,71 +1,69 @@
-// function AboutUs() {
-//   return (
-//     <section className="py-16 bg-gray-50 text-gray-800" id="about">
-//       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
-//           Hakkımızda
-//         </h2>
-//         <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
-//           <div className="text-center max-w-3xl mx-auto">
-//             <p className="text-lg text-gray-600 mb-6">
-//               Güzellik Salonumuza hoş geldiniz! Misyonumuz, sizlere en kaliteli
-//               güzellik hizmetlerini sunarak kendinizi özel ve yenilenmiş
-//               hissettirmektir. Uzman ekibimizle, modern teknikler ve en iyi
-//               ürünler kullanarak saç bakımı, cilt bakımı, tırnak hizmetleri ve
-//               daha fazlasında yanınızdayız.
-//             </p>
-//             <p className="text-lg text-gray-600">
-//               Her müşterimizin ihtiyaçlarına özel çözümler sunuyor, sıcak ve
-//               samimi bir ortamda unutulmaz bir deneyim yaşatmayı hedefliyoruz.
-//               Daha fazla bilgi için{" "}
-//               <span className="text-pink-600 font-medium">Instagram</span> veya{" "}
-//               <span className="text-pink-600 font-medium">WhatsApp</span>{" "}
-//               üzerinden bize ulaşabilirsiniz!
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default AboutUs;
 import logo from "../assets/royal-logo.jpg";
-import React from "react";
+
+import { motion } from "framer-motion";
 
 function AboutUs() {
   return (
-    <section id="about" className="py-16 bg-pink-50 text-gray-800">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+    <motion.section
+      id="about"
+      className="py-16 text-gray-800"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }} // %20si görünse yeter
+      transition={{ duration: 1 }}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
           Hakkımızda
         </h2>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Metin */}
-          <div>
-            <p className="text-lg leading-relaxed mb-4">
-              Royal VIP Güzellik Salonu olarak, güzelliğin her kadının hakkı
-              olduğuna inanıyoruz. Uzman kadromuzla birlikte en yeni
-              teknolojileri ve en kaliteli ürünleri bir araya getirerek sizlere
-              güvenli ve konforlu bir hizmet sunuyoruz.
-            </p>
-            <p className="text-lg leading-relaxed">
-              Misyonumuz; kendinizi özel ve değerli hissettirecek bakım
-              deneyimleri yaşatmak. Güzelliğiniz için buradayız!
-            </p>
-          </div>
-
-          {/* Görsel */}
-          <div className="hidden sm:flex">
-            <img
-              src={logo} // kendi görsel yolunu buraya koy
-              alt="Salonumuz"
-              className="rounded-lg shadow-lg  w-100 "
-            />
+        <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed text-gray-600">
+                Royal VIP Güzellik Salonu olarak, güzelliğin her kadının hakkı
+                olduğuna inanıyoruz. Uzman kadromuzla, en son teknolojileri ve
+                en kaliteli ürünleri kullanarak sizlere güvenli, konforlu ve
+                kişiselleştirilmiş bir güzellik deneyimi sunuyoruz.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Misyonumuz, her müşterimizin kendini özel ve yenilenmiş
+                hissetmesini sağlamak. Sıcak ve samimi bir ortamda, saç bakımı,
+                cilt bakımı, tırnak hizmetleri ve daha fazlasında yanınızdayız.
+                Güzelliğiniz için buradayız!
+              </p>
+              <p className="text-lg text-gray-600">
+                Daha fazla bilgi için{" "}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-300"
+                >
+                  Instagram
+                </a>{" "}
+                veya{" "}
+                <a
+                  href="https://wa.me/901234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-600 font-medium hover:text-pink-700 transition-colors duration-300"
+                >
+                  WhatsApp
+                </a>{" "}
+                üzerinden bize ulaşabilirsiniz!
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={logo}
+                alt="Royal VIP Güzellik Salonu"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,5 +1,6 @@
 import { FaSpa, FaPaintBrush, FaStar, FaFeather, FaEye } from "react-icons/fa";
 import { GiLipstick, GiLaserBlast, GiComb, GiNails } from "react-icons/gi";
+import { motion } from "framer-motion";
 
 const services = [
   { title: "Saç Bakımı", icon: <GiComb /> },
@@ -17,7 +18,14 @@ const services = [
 
 function Features() {
   return (
-    <section className=" py-16 text-gray-800" id="services">
+    <motion.section
+      className=" py-25 text-gray-800"
+      id="services"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }} // %20si görünse yeter
+      transition={{ duration: 1 }}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
           Hizmetlerimiz
@@ -45,7 +53,7 @@ function Features() {
           iletişime geçin.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
