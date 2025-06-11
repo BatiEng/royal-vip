@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 body {
   font-family: "Cormorant Garamond", serif;
   /* font-family: "Playfair Display", serif; */
@@ -34,4 +35,9 @@ body {
   width: 100vw;
   overflow: hidden;
   transition: background-image 0.8s ease-in-out;
+}
+.hero1,
+.hero2,
+.hero3 {
+  background-color: #000; /* or something close to your images */
 }

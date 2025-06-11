@@ -36,21 +36,20 @@ const AboutUs = () => {
     <motion.section
       id="about"
       className="relative py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50/50 text-gray-800 overflow-hidden"
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
     >
       <div className="absolute inset-0 opacity-50" />
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-6">
-        <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 sm:p-12 shadow-xl hover:shadow-2xl transition-all duration-500">
+        <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 sm:p-12 shadow-md  transition-all duration-500">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Text */}
             <motion.div
               className="space-y-6"
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
+              transition={{ duration: 0.2 }}
             >
               <h3 className="text-4xl font-bold">Hakkımızda</h3>
               <p className="text-lg sm:text-xl leading-relaxed text-gray-700">
@@ -90,7 +89,7 @@ const AboutUs = () => {
               className="flex flex-col items-center space-y-8"
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.2 }}
             >
               {/* Video Section */}
               <div className="relative w-full max-w-md">
@@ -100,7 +99,7 @@ const AboutUs = () => {
                 <video
                   src={salonVideo}
                   controls
-                  className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  className="w-full h-64 object-cover rounded-xl "
                   poster={w1} // Using first image as poster
                 />
               </div>
@@ -110,7 +109,7 @@ const AboutUs = () => {
                 <h3 className="mb-4 font-bold text-2xl text-center text-gray-900">
                   Salonumuzdan Kareler
                 </h3>
-                <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <div className="relative overflow-hidden rounded-xl ">
                   <img
                     src={images[current]}
                     alt="Salon"
@@ -120,13 +119,13 @@ const AboutUs = () => {
                   {/* Arrows */}
                   <button
                     onClick={prevSlide}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition"
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full  transition"
                   >
                     <ChevronLeft size={24} />
                   </button>
                   <button
                     onClick={nextSlide}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full  transition"
                   >
                     <ChevronRight size={24} />
                   </button>

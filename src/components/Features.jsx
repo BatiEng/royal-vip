@@ -72,7 +72,6 @@ function Features() {
       id="services"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1 }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
