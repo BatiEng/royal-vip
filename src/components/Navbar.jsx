@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png"; // Adjust the path as necessary
+import logo from "../assets/logo.PNG"; // Adjust the path as necessary
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
