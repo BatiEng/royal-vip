@@ -22,7 +22,7 @@ function App() {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-pink-600 text-white p-4 rounded-full shadow-lg hover:bg-pink-700 transition-all duration-300 transform hover:scale-110"
+          className="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-pink-700 transition-all duration-300 transform hover:scale-110"
           aria-label="Bizi Instagram'da takip edin"
         >
           <FaInstagram className="text-2xl" />

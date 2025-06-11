@@ -2,51 +2,95 @@ import { FaSpa, FaPaintBrush, FaStar, FaFeather, FaEye } from "react-icons/fa";
 import { GiLipstick, GiLaserBlast, GiComb, GiNails } from "react-icons/gi";
 import { motion } from "framer-motion";
 
+import hair from "../assets/hair-care.jpeg";
+import microblading from "../assets/microblading.jpeg";
+import skinCare from "../assets/skin-care.jpeg";
+import lazer from "../assets/lazer.jpeg";
+import kaskirpik from "../assets/kas-kirpik.jpeg";
+import ipek from "../assets/ipek-kirpik.jpeg";
+import nailArt from "../assets/nail-art.jpeg";
+import makeup from "../assets/makeup.jpeg";
+import pedicur from "../assets/pedicur.jpeg";
+import perOje from "../assets/per-oje.jpeg";
+import tirnak1 from "../assets/tirnak-1.jpg";
+import FeatureItem from "./FeatureItem";
+
 const services = [
-  { title: "Saç Bakımı", icon: <GiComb /> },
-  { title: "Tırnak", icon: <GiNails /> },
-  { title: "Protez Tırnak", icon: <FaStar /> },
-  { title: "Kalıcı Oje", icon: <FaPaintBrush /> },
-  { title: "Pedikür", icon: <FaSpa /> },
-  { title: "İpek Kirpik", icon: <FaFeather /> },
-  { title: "Kaş & Kirpik Lifting", icon: <FaEye /> },
-  { title: "Microblading", icon: <GiLipstick /> },
-  { title: "Kalıcı Makyaj", icon: <GiLipstick /> },
-  { title: "Cilt Bakımı", icon: <FaSpa /> },
-  { title: "Lazer Epilasyon", icon: <GiLaserBlast /> },
+  {
+    title: "Saç Bakımı",
+    description: "Saçlarınıza ışıltı ve canlılık kazandırın.",
+    image: hair,
+  },
+  {
+    title: "Nail Art",
+    description:
+      "Şıklığınızı tamamlayan, zarif ve göz alıcı Nail Art tasarımları.",
+    image: tirnak1,
+  },
+
+  {
+    title: "Pedikür",
+    description: "Ayaklarınıza hak ettiği bakımı sunuyoruz.",
+    image: pedicur,
+  },
+  {
+    title: "İpek Kirpik",
+    description: "Doğal ve etkileyici bakışlar için ipek kirpik.",
+    image: ipek,
+  },
+  {
+    title: "Kaş & Kirpik Lifting",
+    description: "Daha belirgin ve hacimli kaş/kirpik görünümü.",
+    image: kaskirpik,
+  },
+  {
+    title: "Microblading",
+    description: "Doğal kaş çizimiyle dolgun görünüm kazanın.",
+    image: microblading,
+  },
+  {
+    title: "Kalıcı Makyaj",
+    description: "Gün boyu kalıcı güzellik, özel tekniklerle.",
+    image: makeup,
+  },
+  {
+    title: "Cilt Bakımı",
+    description: "Cildinize özel bakım uygulamalarıyla yenilenin.",
+    image: skinCare,
+  },
+  {
+    title: "Lazer Epilasyon",
+    description: "Pürüzsüz cilt için kalıcı lazer epilasyon.",
+    image: lazer,
+  },
 ];
 
 function Features() {
   return (
     <motion.section
-      className=" py-25 text-gray-800"
+      className="py-10 text-gray-800"
       id="services"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }} // %20si görünse yeter
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1 }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900 mb-30">
           Hizmetlerimiz
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-20">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative bg-white rounded-xl p-6 flex items-center space-x-4 shadow-md hover:shadow-lg transition-all duration-300 hover:bg-pink-50 group cursor-pointer"
-            >
-              <div className="flex-shrink-0 text-pink-600 text-3xl group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-lg font-medium text-gray-900 group-hover:text-pink-600 transition-colors duration-300">
-                {service.title}
-              </h3>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-            </div>
+            <FeatureItem
+              title={service.title}
+              description={service.description}
+              image={service.image}
+            />
           ))}
         </div>
-        <p className="mt-10 text-center text-gray-600">
+
+        <p className="mt-10 text-center text-gray-600 mt-20">
           Detaylı bilgi almak için lütfen{" "}
           <span className="text-pink-600 font-medium">Instagram</span> veya{" "}
           <span className="text-pink-600 font-medium">WhatsApp</span> üzerinden
