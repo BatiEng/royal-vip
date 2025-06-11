@@ -6,7 +6,7 @@ import w2 from "../assets/shop-2.jpeg";
 import w3 from "../assets/shop-3.jpeg";
 import w4 from "../assets/shop-4.jpeg";
 import w5 from "../assets/shop-5.jpeg";
-import salonVideo from "../assets/video.mp4"; // Replace with your actual video path
+import salonVideo from "../assets/video.MP4"; // Replace with your actual video path
 
 const AboutUs = () => {
   const { scrollYProgress } = useScroll();
