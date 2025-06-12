@@ -2,17 +2,18 @@ import { FaSpa, FaPaintBrush, FaStar, FaFeather, FaEye } from "react-icons/fa";
 import { GiLipstick, GiLaserBlast, GiComb, GiNails } from "react-icons/gi";
 import { motion } from "framer-motion";
 
-import hair from "../assets/hair-care.jpeg";
-import microblading from "../assets/microblading.jpeg";
-import skinCare from "../assets/skin-care.jpeg";
-import lazer from "../assets/lazer.jpeg";
+import hair from "../assets/hair.jpg";
+import hairDetail from "../assets/hair-detail.jpeg";
+import microblading from "../assets/micro.jpeg";
+import skinCare from "../assets/cilt.jpg";
+import lazer from "../assets/cihazlar.jpeg";
 import kaskirpik from "../assets/kas-kirpik.jpeg";
 import ipek from "../assets/ipek-kirpik.jpeg";
-import nailArt from "../assets/nail-art.jpeg";
-import makeup from "../assets/makeup.jpeg";
-import pedicur from "../assets/pedicur.jpeg";
-import perOje from "../assets/per-oje.jpeg";
+import makeup from "../assets/kalici.jpeg";
+import pedicur from "../assets/pedikur.jpeg";
 import tirnak1 from "../assets/tirnak-1.jpg";
+import buzlazer from "../assets/buzlazer.jpeg";
+import protein from "../assets/protein.jpg";
 import FeatureItem from "./FeatureItem";
 
 const services = [
@@ -22,7 +23,7 @@ const services = [
     image: hair,
   },
   {
-    title: "Nail Art",
+    title: "Protez Tırnak",
     description:
       "Şıklığınızı tamamlayan, zarif ve göz alıcı Nail Art tasarımları.",
     image: tirnak1,
@@ -62,6 +63,21 @@ const services = [
     title: "Lazer Epilasyon",
     description: "Pürüzsüz cilt için kalıcı lazer epilasyon.",
     image: lazer,
+  },
+  {
+    title: "Saç Analizi",
+    description: "Saç tipinize özel analiz ve bakım önerileri.",
+    image: hairDetail,
+  },
+  {
+    title: "Saç Proteinlerimiz",
+    description: "Saç sağlığınızı artıran özel protein tedavileri.",
+    image: protein,
+  },
+  {
+    title: "Buz Lazer",
+    description: "Ağrısız ve hızlı lazer epilasyon deneyimi.",
+    image: buzlazer,
   },
 ];
 

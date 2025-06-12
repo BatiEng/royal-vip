@@ -6,7 +6,7 @@ body {
 }
 
 .hero1 {
-  background-image: url("./assets/hero3.jpeg");
+  background-image: url("./assets/hero5.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@ body {
   transition: background-image 0.8s ease-in-out;
 }
 .hero2 {
-  background-image: url("./assets/hero5.jpeg");
+  background-image: url("./assets/w-1.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

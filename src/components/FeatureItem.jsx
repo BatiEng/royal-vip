@@ -13,7 +13,7 @@ const FeatureItem = ({ title, description, image }) => {
       </div>
 
       {/* Text Container */}
-      <div className="absolute left-1/2 bottom-[-1.5rem] transform -translate-x-1/2 bg-white rounded-xl shadow-lg px-4 py-3 w-[90%] sm:w-4/5">
+      <div className="absolute left-1/2 bottom-[-3.5rem] transform -translate-x-1/2 bg-white rounded-xl shadow-lg px-4 py-3 w-[90%] sm:w-4/5">
         <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 line-clamp-1">
           {title}
         </h3>
