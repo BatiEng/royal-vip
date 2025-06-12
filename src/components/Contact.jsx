@@ -52,7 +52,7 @@ function Contact() {
 
   return (
     <motion.section
-      className="py-16 bg-gradient-to-b from-gray-50 to-white text-gray-800"
+      className="py-16   text-gray-800"
       id="contact"
       variants={containerVariants}
       initial="hidden"

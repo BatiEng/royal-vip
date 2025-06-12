@@ -42,7 +42,7 @@ const AboutUs = () => {
     >
       <div className="absolute inset-0 opacity-50" />
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-6">
-        <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 sm:p-12 shadow-md  transition-all duration-500">
+        <div className="relative   rounded-2xl p-8 sm:p-12 border border-gray-200  transition-all duration-500">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Text */}
             <motion.div
