@@ -111,7 +111,7 @@ function Contact() {
                   <h4 className="font-bold">Adres</h4>
                   <p className="text-gray-600">
                     Ordu evi, Kepeci mahallesi 6 mart cadde, karşısı no 41-45/1,
-                    32000 Burdur Merkez/Isparta
+                    32000 Merkez/Isparta
                   </p>
                 </a>
               </motion.div>
