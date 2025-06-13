@@ -8,7 +8,7 @@ const FeatureItem = ({ title, description, image }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-72 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
