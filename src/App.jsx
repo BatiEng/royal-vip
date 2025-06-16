@@ -8,7 +8,7 @@ function App() {
     <div className="relative">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/t" element={<Teklif />} />
+        <Route path="/teklif" element={<Teklif />} />
       </Routes>
       <div className="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
         <a
