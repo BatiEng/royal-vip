@@ -2,13 +2,14 @@ import { Route, Routes } from "react-router-dom";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import HomePage from "./pages/HomePage";
 import Teklif from "./components/Teklif";
+import AddReminder from "./pages/AddReminder";
 
 function App() {
   return (
     <div className="relative">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/teklif" element={<Teklif />} />
+        <Route path="/sms-ekle" element={<AddReminder />} />
       </Routes>
       <div className="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
         <a
