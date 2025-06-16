@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import HomePage from "./pages/HomePage";
+import Teklif from "./components/Teklif";
 
 function App() {
   return (
     <div className="relative">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/t" element={<Teklif />} />
       </Routes>
       <div className="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
         <a
