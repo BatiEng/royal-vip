@@ -6,7 +6,7 @@ import Features from "../components/Features";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
-import { Helmet } from "react-helmet-async"; // <== Burada zaten var
+import { Helmet } from "react-helmet";
 
 const heroSlides = [
   {
