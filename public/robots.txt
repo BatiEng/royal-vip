@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /sms-ekle
+
+Allow: /
+
+Sitemap: https://royalvipguzellik.com/sitemap.xml

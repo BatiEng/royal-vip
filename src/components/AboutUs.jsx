@@ -34,7 +34,7 @@ const AboutUs = () => {
 
   return (
     <motion.section
-      id="about"
+      id="hakkimizda"
       className="relative py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50/50 text-gray-800 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

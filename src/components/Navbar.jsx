@@ -12,16 +12,16 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <div className="space-x-6 hidden md:flex">
-          <a href="#services" className="hover:text-pink-300 transition">
+          <a href="#hizmetler" className="hover:text-pink-300 transition">
             Hizmetler
           </a>
-          <a href="#about" className="hover:text-pink-300 transition">
+          <a href="#hakkimizda" className="hover:text-pink-300 transition">
             Hakkımızda
           </a>
-          <a href="#gallery" className="hover:text-pink-300 transition">
+          <a href="#hakkimizda" className="hover:text-pink-300 transition">
             Galeri
           </a>
-          <a href="#contact" className="hover:text-pink-300 transition">
+          <a href="#iletisim" className="hover:text-pink-300 transition">
             İletişim
           </a>
         </div>
@@ -80,28 +80,28 @@ function Navbar() {
           </div>
           <div className="flex-grow flex flex-col items-center justify-center space-y-6 text-lg">
             <a
-              href="#services"
+              href="#hizmetler"
               className="block text-gray-900 hover:text-pink-600 transition"
               onClick={() => setIsOpen(false)}
             >
               Hizmetler
             </a>
             <a
-              href="#about"
+              href="#hakkimizda"
               className="block text-gray-900 hover:text-pink-600 transition"
               onClick={() => setIsOpen(false)}
             >
               Hakkımızda
             </a>
             <a
-              href="#gallery"
+              href="#hakkimizda"
               className="block text-gray-900 hover:text-pink-600 transition"
               onClick={() => setIsOpen(false)}
             >
               Galeri
             </a>
             <a
-              href="#contact"
+              href="#iletisim"
               className="block text-gray-900 hover:text-pink-600 transition"
               onClick={() => setIsOpen(false)}
             >

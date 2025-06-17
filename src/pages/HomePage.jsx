@@ -6,7 +6,7 @@ import Features from "../components/Features";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
-import Ulasim from "../components/Ulasim";
+import { Helmet } from "react-helmet-async"; // <== Burada zaten var
 
 const heroSlides = [
   {
@@ -32,13 +32,11 @@ const heroSlides = [
 function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // ⏱️ Auto slide effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000); // 6 saniyede bir slayt değiştir
-
-    return () => clearInterval(interval); // component unmount olursa temizle
+    }, 6000);
+    return () => clearInterval(interval);
   }, []);
 
   const nextSlide = () => {
@@ -53,6 +51,53 @@ function HomePage() {
 
   return (
     <div>
+      {/* SEO Title & Meta */}
+      <Helmet>
+        <title>
+          Royal VIP Güzellik Salonu | Isparta Cilt Bakımı, Lazer Epilasyon &
+          Protez Tırnak
+        </title>
+        <meta
+          name="description"
+          content="Isparta'nın profesyonel güzellik salonu Royal VIP ile cilt bakımı, lazer epilasyon, protez tırnak ve kaş tasarımı hizmetlerini deneyimleyin."
+        />
+        <meta
+          name="keywords"
+          content="Isparta güzellik salonu, protez tırnak Isparta, lazer epilasyon Isparta, cilt bakımı Isparta, kaş tasarımı"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://royalvipguzellik.com/" />
+        <meta
+          property="og:title"
+          content="Royal VIP Güzellik Salonu | Isparta Cilt Bakımı, Lazer Epilasyon & Protez Tırnak"
+        />
+        <meta
+          property="og:description"
+          content="Isparta'nın profesyonel güzellik merkezi. Kalıcı güzellik için cilt bakımı, lazer epilasyon ve protez tırnak hizmetleri."
+        />
+        <meta
+          property="og:image"
+          content="https://royalvipguzellik.com/logo.PNG"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Royal VIP Güzellik Salonu | Isparta Cilt Bakımı, Lazer Epilasyon & Protez Tırnak"
+        />
+        <meta
+          name="twitter:description"
+          content="Isparta'da profesyonel güzellik ve bakım hizmetleri: Lazer epilasyon, protez tırnak ve cilt bakımı."
+        />
+        <meta
+          name="twitter:image"
+          content="https://royalvipguzellik.com/logo.PNG"
+        />
+      </Helmet>
+
       {/* Hero Section */}
       <div className={`relative h-screen bg-cover bg-center ${bgClass}`}>
         <Navbar />
@@ -74,7 +119,6 @@ function HomePage() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Arrows */}
         <div className="absolute bottom-10 left-6 md:left-16 z-10 flex items-center gap-4">
           <button
             onClick={prevSlide}
@@ -92,11 +136,10 @@ function HomePage() {
       </div>
 
       {/* Diğer Bölümler */}
-      <div className="">
+      <div>
         <Features />
         <AboutUs />
         <Contact />
-
         <Footer />
       </div>
     </div>

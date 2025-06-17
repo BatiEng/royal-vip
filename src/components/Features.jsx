@@ -85,7 +85,7 @@ function Features() {
   return (
     <motion.section
       className="py-10 text-gray-800"
-      id="services"
+      id="hizmetler"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -98,9 +98,11 @@ function Features() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-20">
           {services.map((service, index) => (
             <FeatureItem
+              key={index}
               title={service.title}
               description={service.description}
               image={service.image}
+              alt={`${service.title} hizmeti görseli`} // örnek: "Protez Tırnak hizmeti görseli"
             />
           ))}
         </div>

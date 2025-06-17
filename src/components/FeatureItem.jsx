@@ -1,13 +1,13 @@
 import React from "react";
 
-const FeatureItem = ({ title, description, image }) => {
+const FeatureItem = ({ title, description, image, alt }) => {
   return (
     <div className="relative w-full max-w-sm mx-auto group">
       {/* Image */}
       <div>
         <img
           src={image}
-          alt={title}
+          alt={alt || `${title} görseli`} // ✅ Alt açıklama dinamik
           className="w-full h-72 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
         />
       </div>

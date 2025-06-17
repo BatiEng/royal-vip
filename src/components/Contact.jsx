@@ -53,7 +53,7 @@ function Contact() {
   return (
     <motion.section
       className="py-16   text-gray-800"
-      id="contact"
+      id="iletisim"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
